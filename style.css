@@ -1,421 +1,452 @@
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    
-    .bigcityboy {
-        background-image: url(img/boy.png);
-        width: 1339px;
-        height: 690px;
-        position: relative;
-        font-family: 'PT Serif', serif;
-        background-size: cover;
-    }
-    
-    .bigcityboy::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+    filter: s;
+}
+
+.bigcityboy {
+    background-image: url(img/boy.png);
+    background-attachment: fixed;
+    width: 1339px;
+    height: 690px;
+    position: relative;
+    font-family: 'PT Serif', serif;
+    background-size: cover;
+}
+
+.bigcityboy::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #353b48;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.menu {
+    width: 1339px;
+    height: 60px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 999999;
+    position: fixed;
+    background-color: #353b48;
+    opacity: 0.8;
+}
+
+.text-small {
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.color {
+    color: red;
+}
+
+.list ul {
+    display: flex;
+    list-style: none;
+    margin-left: 450px;
+}
+
+.list ul li {
+    margin-left: 50px;
+}
+
+ul li a:hover {
+    color: red;
+    transition: all 0.5s ease;
+}
+
+/* hết menu 1 */
+
+/* bắt đầu menu 2 */
+
+.list-text {
+    position: absolute;
+    z-index: 3;
+    margin-top: 200px;
+    margin-left: 100px;
+    color: white;
+    font-size: 30px;
+}
+
+.relative {
+    position: relative;
+    display: block;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.emptybox {
+    position: absolute;
+    z-index: 6;
+    background-color: #e84118;
+    top: 0;
+    left: 0;
+    height: 74px;
+    width: 0;
+    animation: mini-world 3s forwards;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+@keyframes mini-world {
+    0% {
         left: 0;
-        background-color: #353b48;
-        opacity: 0.6;
-        z-index: 2;
+        width: 0px;
     }
-    
-    .menu {
-        width: 1339px;
-        height: 60px;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        z-index: 999999;
-        position: fixed;
-        background-color: #353b48;
-        opacity: 0.8;
+    50% {
+        width: 400px;
     }
-    
-    .text-small {
-        margin-left: 50px;
+    51% {
+        width: 400px;
     }
-    
-    a {
-        text-decoration: none;
-        color: white;
+    100% {
+        transform: translateX(400px);
+        transition: 4s;
     }
-    
-    .color {
-        color: red;
-    }
-    
-    .list ul {
-        display: flex;
-        list-style: none;
-        margin-left: 450px;
-    }
-    
-    .list ul li {
-        margin-left: 50px;
-    }
-    
-    ul li a:hover {
-        color: red;
-    }
-    /* hết menu 1 */
-    /* bắt đầu menu 2 */
-    
-    .list-text {
-        position: absolute;
-        z-index: 3;
-        margin-top: 200px;
-        margin-left: 100px;
-        color: white;
-        font-size: 30px;
-    }
-    
-    .relative {
-        position: relative;
-        display: block;
-        z-index: 4;
-        overflow: hidden;
-    }
-    
-    .emptybox {
-        position: absolute;
-        z-index: 6;
-        background-color: #e84118;
-        top: 0;
-        left: 0;
-        height: 74px;
-        width: 0;
-        animation: mini-world 3s ease;
-        animation-delay: 2s;
-    }
-    
-    @keyframes mini-world {
-        0% {
-            width: 0px;
-        }
-        50% {
-            width: 400px;
-        }
-        51% {
-            width: 400px;
-        }
-        100% {
-            transform: translateX(400px);
-            transition: 40s;
-        }
-    }
-    
-    .button {
-        margin-top: 50px;
-    }
-    
-    button {
-        padding: 20px 40px 20px 40px;
-        border: 1px solid red;
-        background: none;
-        font-size: 27px;
-    }
-    
-    button:hover {
-        background-color: red;
-    }
-    /* kết thúc menu 2 */
-    /* bắt đầu thân */
-    
-    .text-decoration {
-        margin-top: 50px;
-        text-align: center;
-        font-family: 'Comfortaa', cursive;
-    }
-    
-    .font-size-1 {
-        font-size: 50px;
-        letter-spacing: 0.2cm;
-    }
-    
-    .color-red {
-        color: red;
-    }
-    
-    .zoom-out {
-        width: 500px;
-        margin-left: 430px;
-        margin-top: 10px;
-        color: #b2bec3;
-    }
-    /* hết */
-    /* phần 4 ảnh */
-    
-    .flex {
-        display: flex;
-        margin-top: 50PX;
-    }
-    
-    .img-1 {
-        width: 280px;
-        height: 350px;
-        position: relative;
-        background-image: url(img/1.png);
-        background-size: cover;
-        border-radius: 10px;
-        z-index: 4;
-        margin-left: 50px;
-    }
-    
-    .img-1::after {
-        content: "";
-        position: absolute;
-        z-index: 4;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-        opacity: 0.8;
-        border-radius: 10px;
-    }
-    
-    .before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 6;
-        width: 230px;
-        height: 350px;
-        margin-left: 25px;
-    }
-    
-    .picture-2 {
-        width: 80px;
-        height: 80px;
-        margin-top: 40px;
-    }
-    
-    .font {
-        font-size: 20px;
-        color: white;
-    }
-    /* kết thúc 4 ảnh */
-    
-    .row {
-        margin-top: 250px;
-    }
-    
-    .gruuu {
-        margin-top: 50px;
-        margin-left: 200px;
-    }
-    
-    .font-size-3 {
-        font-size: 60px;
-        font-family: 'Architects Daughter', cursive;
-        text-align: center;
-        letter-spacing: 0.1cm;
-    }
-    
-    .not-1 {
-        margin-left: 20px;
-        color: tomato;
-    }
-    
-    .figure-1 {
-        display: flex;
-    }
-    
-    .umbrella-1 {
-        width: 500px;
-        height: 400px;
-        background: #34495e;
-        color: white;
-        font-family: 'Architects Daughter', cursive;
-    }
-    
-    .omg {
-        margin-top: 100px;
-        margin-left: 25px;
-    }
-    
-    .picture-3 {
-        width: 500px;
-        height: 400px;
-        position: absolute;
-    }
-    
-    .fix-1 {
-        font-size: 40px;
-    }
-    
-    .img-3 {
-        width: 500px;
-        height: 400px;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .img-3::after {
-        content: "";
-        position: absolute;
-        width: 500px;
-        height: 400px;
-        top: 0;
-        left: 0;
-        background: #34495e;
-        opacity: 0.6;
-    }
-    
-    .img-3:hover .picture-3 {
-        transform: scale(1.1, 1.1);
-    }
-    /* thân 3 */
-    
-    .part-3 {
-        display: flex;
-        margin-top: 200px;
-        margin-left: 200px;
-        font-family: 'Nanum Myeongjo', serif;
-    }
-    
-    .item-1 {
-        width: 300px;
-        height: 380px;
-        position: relative;
-        border: 10px solid red;
-    }
-    
-    .picture-4 {
-        position: absolute;
-        width: 300px;
-        height: 380px;
-        top: -10%;
-        left: 10%;
-    }
-    
-    .item-2 {
-        margin-left: 100px;
-        width: 650px;
-    }
-    
-    .none {
-        margin-top: 10px;
-        color: silver;
-        font-size: 18px;
-    }
-    
-    .size {
-        font-size: 70px;
-        font-weight: 50;
-        letter-spacing: 0.2cm;
-    }
-    
-    .button-2 {
-        margin-top: 50px;
-    }
-    /* thân 4 */
-    
-    .map-4 {
-        margin-top: 300px;
-        text-align: center;
-    }
-    
-    .big-text {
-        font-size: 50px;
-    }
-    
-    .part-4 {
-        display: flex;
-    }
-    
-    .item-3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .phone-img {
-        width: 300px;
-        height: 170px;
-        border-radius: 10px;
-        border: 1px solid black;
-        position: relative;
-        box-shadow: 0px 0px 18px 0 #0000002c;
-        border: none;
-        margin-left: 110px;
-        margin-top: 20px;
-    }
-    
-    .phone-img:hover {
-        box-shadow: 0px 0px 5px 0 #0000002c;
-    }
-    
-    .ip-1 {
-        position: absolute;
-        width: 69px;
-        height: 69px;
-        bottom: 30%;
-        left: 10%;
-    }
-    
-    .phone-number {
-        position: absolute;
-        margin-left: 200px;
-    }
-    /* ket thuc p4 */
-    
-    .end {
-        width: 1339px;
-        height: 250px;
-        background-color: #2c3e50;
-        text-align: center;
-        position: relative;
-        margin-top: 200px;
-    }
-    
-    .aura {
-        position: absolute;
-        left: 40%;
-        bottom: 4%;
-    }
-    
-    .fun {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    
-    .fb {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .daddy {
-        position: relative;
-    }
-    
-    .the-nun {
-        font-size: 30px;
-    }
-    
-    .pun {
-        margin-top: 50px;
-    }
-    
-    .daddy::before {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: 0;
-        left: 0;
-        background: #2f3640;
-        border-radius: 50%;
-        opacity: 0.95;
-    }
-    
-    .daddy:hover::before {
-        opacity: 0;
-    }
+}
+
+.button {
+    margin-top: 50px;
+}
+
+button {
+    padding: 20px 40px 20px 40px;
+    border: 1px solid red;
+    background: none;
+    font-size: 27px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+/* kết thúc menu 2 */
+
+/* bắt đầu thân */
+
+.text-decoration {
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.font-size-1 {
+    font-size: 50px;
+    letter-spacing: 0.2cm;
+}
+
+.color-red {
+    color: red;
+}
+
+.zoom-out {
+    width: 500px;
+    margin-left: 430px;
+    margin-top: 10px;
+    color: #b2bec3;
+}
+
+/* hết */
+
+/* phần 4 ảnh */
+
+.flex {
+    display: flex;
+    margin-top: 50PX;
+}
+
+.img-1 {
+    width: 280px;
+    height: 350px;
+    position: relative;
+    background-image: url(img/1.png);
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 4;
+    margin-left: 50px;
+}
+
+.img-1::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 230px;
+    height: 350px;
+    margin-left: 25px;
+}
+
+.picture-2 {
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+}
+
+.font {
+    font-size: 20px;
+    color: white;
+}
+
+/* kết thúc 4 ảnh */
+
+.row {
+    margin-top: 250px;
+}
+
+.gruuu {
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.font-size-3 {
+    font-size: 60px;
+    font-family: 'Architects Daughter', cursive;
+    text-align: center;
+    letter-spacing: 0.1cm;
+}
+
+.not-1 {
+    margin-left: 20px;
+    color: tomato;
+}
+
+.figure-1 {
+    display: flex;
+}
+
+.umbrella-1 {
+    width: 500px;
+    height: 400px;
+    background: #34495e;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.omg {
+    margin-top: 100px;
+    margin-left: 25px;
+}
+
+.picture-3 {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+}
+
+.fix-1 {
+    font-size: 40px;
+}
+
+.img-3 {
+    width: 500px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-3::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    background: #34495e;
+    opacity: 0.5;
+}
+
+.img-3:hover .picture-3 {
+    transform: scale(1.1, 1.1);
+    transition: all 1.5s ease-in-out;
+}
+
+/* thân 3 */
+
+.part-3 {
+    display: flex;
+    margin-top: 200px;
+    margin-left: 200px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.item-1 {
+    width: 300px;
+    height: 380px;
+    position: relative;
+    border: 10px solid red;
+}
+
+.picture-4 {
+    position: absolute;
+    width: 302px;
+    height: 382px;
+    top: -3%;
+    left: -4%;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.picture-4:hover {
+    top: -10%;
+    left: 10%;
+}
+
+.item-2 {
+    margin-left: 100px;
+    width: 650px;
+}
+
+.none {
+    margin-top: 10px;
+    color: silver;
+    font-size: 18px;
+}
+
+.size {
+    font-size: 70px;
+    font-weight: 50;
+    letter-spacing: 0.2cm;
+}
+
+.button-2 {
+    margin-top: 50px;
+}
+
+/* thân 4 */
+
+.map-4 {
+    margin-top: 300px;
+    text-align: center;
+}
+
+.big-text {
+    font-size: 50px;
+}
+
+.part-4 {
+    display: flex;
+}
+
+.item-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-img {
+    width: 300px;
+    height: 170px;
+    border-radius: 10px;
+    border: 1px solid black;
+    position: relative;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    border: none;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+
+.phone-img:hover {
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+
+.ip-1 {
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    bottom: 30%;
+    left: 10%;
+}
+
+.phone-number {
+    position: absolute;
+    margin-left: 200px;
+}
+
+/* ket thuc p4 */
+
+.end {
+    width: 1339px;
+    height: 250px;
+    background-color: #2c3e50;
+    text-align: center;
+    position: relative;
+    margin-top: 200px;
+}
+
+.aura {
+    position: absolute;
+    left: 40%;
+    bottom: 4%;
+}
+
+.fun {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.fb {
+    width: 50px;
+    height: 50px;
+}
+
+.daddy {
+    position: relative;
+    transition: all 1s;
+}
+
+.the-nun {
+    font-size: 30px;
+}
+
+.pun {
+    margin-top: 50px;
+}
+
+.daddy::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: #2f3640;
+    border-radius: 50%;
+    opacity: 0.95;
+}
+
+.daddy:hover::before {
+    opacity: 0;
+    transition: all 0.5s;
+}
